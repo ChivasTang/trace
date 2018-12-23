@@ -36,7 +36,6 @@ public class TraceInstrumentServiceImpl implements TraceInstrumentService {
                 TraceInstrumentGraphResDomain graphRes=new TraceInstrumentGraphResDomain();
                 graphRes.setInst_disp_id(graph.getInst_disp_id());
                 graphRes.setInst_disp_name(graph.getInst_disp_name());
-                System.out.println(graphRes);
                 graphRes.setInst_disp_series(getGraphSeriesList(graphList,graphRes));
                 graphResList.add(graphRes);
             }
@@ -70,7 +69,6 @@ public class TraceInstrumentServiceImpl implements TraceInstrumentService {
                 graphSeries.setName(graph.getApplication_name());
                 graphSeries.setMarkers(getGraphSeriesMarkersList(graphSeries.getApplication_code()));
                 graphSeries.setData(getGraphSeriesDataList(graphList,graphSeries));
-                System.out.println(graphSeries);
                 graphSeriesList.add(graphSeries);
             }
         }
@@ -86,15 +84,12 @@ public class TraceInstrumentServiceImpl implements TraceInstrumentService {
             graphSeriesData.setApplication_code(graphSeries.getApplication_code());
             graphSeriesData.setDate(date);
             graphSeriesData.setValue(0);
-            System.out.println(graphSeriesData);
             graphSeriesDataList.add(graphSeriesData);
         }
 
-        System.out.println(graphSeriesDataList);
-
         for (TraceInstrumentGraphDomain graph : graphList) {
             for (TraceInstrumentGraphSeriesDataDomain graphSeriesData : graphSeriesDataList) {
-                if(graphSeriesData.getInst_disp_id()==(long)0 && graphSeriesData.getApplication_code()==graph.getApplication_code() && graphSeriesData.getDate()==graph.getCreate_date()){
+                if(graphSeriesData.getInst_disp_id()==(long)0 && graphSeriesData.getApplication_code()==graph.getApplication_code() && graphSeriesData.getDate().equals(graph.getCreate_date())){
                     int value = graphSeriesData.getValue();
                     value += graph.getSum_count();
                     graphSeriesData.setValue(value);
