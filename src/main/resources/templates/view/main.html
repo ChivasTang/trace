@@ -17,6 +17,35 @@
     <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
-<div id="lst-graph-container" class=""></div>
+<div class="container">
+<div class="k-content" style="display: flex;">
+<ul id="category_menu" style="width: auto;">
+    <li>
+        <label for="selector1"><input id="selector1" type="hidden" disabled="disabled" value="0"><span id="selector1-text">すべてのカテゴリ</span></label>
+        <ul>
+            <li id="ca0-li" class="root-category" style="display: none;"><label for="ca0"><input id="ca0" name="ca0" type="hidden" value="0"><span id="ca0-text">すべてのカテゴリ</span></label></li>
+            <li class="root-category"><label for="ca1"><input id="ca1" name="ca1" type="hidden" value="1"><span id="ca1-text">アジア</span></label>
+                <ul>
+                    <li><label for="ca4"><input id="ca4" name="ca4" type="hidden" value="4"><span id="ca4-text">日本</span></label></li>
+                    <li><label for="ca5"><input id="ca5" name="ca5" type="hidden" value="5"><span id="ca5-text">インド</span></label></li>
+                    <li><label for="ca6"><input id="ca6" name="ca6" type="hidden" value="6"><span id="ca6-text">パキスタン</span></label></li>
+                    <li><label for="ca7"><input id="ca7" name="ca7" type="hidden" value="7"><span id="ca7-text">中国</span></label></li>
+                    <li><label for="ca8"><input id="ca8" name="ca8" type="hidden" value="8"><span id="ca8-text">韓国</span></label></li>
+                    <li><label for="ca9"><input id="ca9" name="ca9" type="hidden" value="9"><span id="ca9-text">ロシア</span></label></li>
+                </ul>
+            </li>
+            <li class="root-category"><label for="ca2"><input id="ca2" name="ca2" type="hidden" value="2"><span id="ca2-text">アメリカ</span></label>
+                <ul>
+                    <li><label for="ca10"><input id="ca10" name="ca10" type="hidden" value="10"><span id="ca10-text">米国</span></label></li>
+                    <li><label for="ca11"><input id="ca11" name="ca11" type="hidden" value="11"><span id="ca11-text">カナダ</span></label></li>
+                    <li><label for="ca12"><input id="ca12" name="ca12" type="hidden" value="12"><span id="ca12-text">メキシコ</span></label></li>
+                </ul>
+            </li>
+            <li class="root-category"><label for="ca3"><input id="ca3" name="ca3" type="hidden" value="3"><span id="ca3-text">ヨーロッパ</span></label></li>
+        </ul>
+    </li>
+</ul>
+</div>
+</div>
 </body>
 </html>

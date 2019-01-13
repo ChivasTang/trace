@@ -24,9 +24,4 @@ public class TraceInstrumentController {
         return new ModelAndView("main");
     }
 
-    @GetMapping("/getGraphData")
-    @ResponseBody
-    public List<TraceInstrumentGraphResDomain> getGraphData(HttpServletRequest req, HttpServletResponse res){
-        return traceInstrumentService.selectGraphList();
-    }
 }

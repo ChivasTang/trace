@@ -12,7 +12,6 @@
     <artifactId>trace</artifactId>
     <version>1.0.0</version>
     <name>trace</name>
-    <description></description>
 
     <properties>
         <java.version>1.8</java.version>
